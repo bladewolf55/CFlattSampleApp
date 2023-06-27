@@ -44,7 +44,7 @@ public class OrganizationStatesEndpoint_Should : WebApplicationTestBase
     public async Task Remove_a_state_from_an_organization()
     {
         // arrange
-        // PacifiCorp
+        // CFlatt
         var organizationId = 1;
         var organization = Context.Organizations.Include(a => a.States).Single(a => a.Id == organizationId);
         var count = organization.States.Count;

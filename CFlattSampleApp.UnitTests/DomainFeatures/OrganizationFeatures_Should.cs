@@ -67,7 +67,7 @@ public class OrganizationFeatures_Should
     public async Task Return_organizations()
     {
         // arrange
-        List<Data.Models.Organization> organizations = new() { OrganizationData.CAPartnerOrganization, OrganizationData.PacifiCorpOrganization };
+        List<Data.Models.Organization> organizations = new() { OrganizationData.CAPartnerOrganization, OrganizationData.CFlattOrganization };
         mediator.Send(Arg.Any<Data.Features.Organizations.RetrieveOrganizations.Command>()).Returns(organizations);
 
         var command = new Domain.Features.Organizations.RetrieveOrganizations.Command();
