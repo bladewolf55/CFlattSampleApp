@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
-using PacifiCorp.PSPortal.Domain.Mapping;
-using PacifiCorp.PSPortal.IntegrationTests.TestModels;
+using CFlattSampleApp.Domain.Mapping;
+using CFlattSampleApp.IntegrationTests.TestModels;
 using System.Runtime.CompilerServices;
 using Xunit;
-namespace PacifiCorp.PSPortal.IntegrationTests;
+namespace CFlattSampleApp.IntegrationTests;
 
 public class UsersEndpoint_Should : WebApplicationTestBase
 {

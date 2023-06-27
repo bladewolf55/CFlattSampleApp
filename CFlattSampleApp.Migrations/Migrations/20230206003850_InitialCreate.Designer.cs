@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PacifiCorp.PSPortal.Data;
+using CFlattSampleApp.Data;
 
 #nullable disable
 
-namespace PacifiCorp.PSPortal.Migrations.Migrations
+namespace CFlattSampleApp.Migrations.Migrations
 {
     [DbContext(typeof(PSPortalDbContext))]
     [Migration("20230206003850_InitialCreate")]
@@ -25,7 +25,7 @@ namespace PacifiCorp.PSPortal.Migrations.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("PacifiCorp.PSPortal.Data.Models.User", b =>
+            modelBuilder.Entity("CFlattSampleApp.Data.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

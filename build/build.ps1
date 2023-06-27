@@ -62,7 +62,7 @@ $sw = [System.Diagnostics.Stopwatch]::StartNew()
 # Test
 if (-Not($NoTest)) {
     ./test-dotnet `
-        -ProjectDirectory ../PacifiCorp.PSPortal.UnitTests `
+        -ProjectDirectory ../CFlattSampleApp.UnitTests `
         -PackageDirectory $PackageDirectory `
         -CI:$CI `
         -Clean:$Clean 
@@ -76,7 +76,7 @@ if ($TestOnly) {
 
 # Build and Package
 ./build-dotnet `
-    -ProjectDirectory ../PacifiCorp.PSPortal.WebApi `
+    -ProjectDirectory ../CFlattSampleApp.WebApi `
     -PackageDirectory $PackageDirectory `
     -CI:$CI `
     -Clean:$Clean
@@ -85,8 +85,8 @@ CheckForError
 
 # Data
 ./build-migrations `
-    -ProjectDirectory ../PacifiCorp.PSPortal.Migrations `
-    -StartupProjectDirectory ../PacifiCorp.PSPortal.Migrations `
+    -ProjectDirectory ../CFlattSampleApp.Migrations `
+    -StartupProjectDirectory ../CFlattSampleApp.Migrations `
     -DbContextName PSPortalDbContext `
     -PackageDirectory $PackageDirectory `
     -CI:$CI `

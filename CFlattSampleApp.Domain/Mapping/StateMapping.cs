@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.Domain.Mapping;
+﻿namespace CFlattSampleApp.Domain.Mapping;
 
 public static class StateMapping
 {

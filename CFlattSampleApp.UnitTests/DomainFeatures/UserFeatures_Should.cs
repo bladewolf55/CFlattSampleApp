@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.UnitTests.DomainFeatures;
+﻿namespace CFlattSampleApp.UnitTests.DomainFeatures;
 
 public class UserFeatures_Should
 {

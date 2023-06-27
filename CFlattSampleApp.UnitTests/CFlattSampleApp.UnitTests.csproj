@@ -34,9 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PacifiCorp.PSPortal.Data\PacifiCorp.PSPortal.Data.csproj" />
-    <ProjectReference Include="..\PacifiCorp.PSPortal.Domain\PacifiCorp.PSPortal.Domain.csproj" />
-    <ProjectReference Include="..\PacifiCorp.PSPortal.WebApi\PacifiCorp.PSPortal.WebApi.csproj" />
+    <ProjectReference Include="..\CFlattSampleApp.Data\CFlattSampleApp.Data.csproj" />
+    <ProjectReference Include="..\CFlattSampleApp.Domain\CFlattSampleApp.Domain.csproj" />
+    <ProjectReference Include="..\CFlattSampleApp.WebApi\CFlattSampleApp.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

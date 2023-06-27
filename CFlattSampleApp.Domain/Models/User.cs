@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.Domain.Models;
+﻿namespace CFlattSampleApp.Domain.Models;
 
 public class User
 {

@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.Domain.Features.Users;
+﻿namespace CFlattSampleApp.Domain.Features.Users;
 
 public static class DeleteUser
 {

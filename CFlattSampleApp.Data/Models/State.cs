@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.Data.Models;
+﻿namespace CFlattSampleApp.Data.Models;
 
 public class State
 {

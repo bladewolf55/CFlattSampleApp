@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.Data.Features.Organizations;
+﻿namespace CFlattSampleApp.Data.Features.Organizations;
 
 public static class RetrieveOrganizations
 {

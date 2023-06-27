@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Diagnostics;
-using PacifiCorp.PSPortal.Data;
+using CFlattSampleApp.Data;
 
-namespace PacifiCorp.PSPortal.Domain.Features.Users;
+namespace CFlattSampleApp.Domain.Features.Users;
 
 public static class CreateUser
 {

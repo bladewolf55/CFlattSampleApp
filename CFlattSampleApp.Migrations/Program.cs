@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PacifiCorp.PSPortal.Data;
+using CFlattSampleApp.Data;
 
 IHost host = Host.CreateDefaultBuilder(args)
     // CreateDefaultBuilder automatically reads configs
@@ -13,7 +13,7 @@ IHost host = Host.CreateDefaultBuilder(args)
         IConfiguration configuration = builder.Configuration;
         services.AddSqlServer<PSPortalDbContext>(
             configuration.GetConnectionString("PSPortalDb"),
-            options => options.MigrationsAssembly("PacifiCorp.PSPortal.Migrations"));
+            options => options.MigrationsAssembly("CFlattSampleApp.Migrations"));
     })
     .Build();
 

@@ -1,9 +1,9 @@
 ﻿
 using CommunityToolkit.Diagnostics;
 using Microsoft.EntityFrameworkCore;
-using PacifiCorp.PSPortal.Data;
+using CFlattSampleApp.Data;
 
-namespace PacifiCorp.PSPortal.Domain.Features.Organizations;
+namespace CFlattSampleApp.Domain.Features.Organizations;
 
 public static class RetrieveOrganization
 {

@@ -1,4 +1,4 @@
 ﻿global using MediatR;
-global using PacifiCorp.PSPortal.Domain.Models;
-global using PacifiCorp.PSPortal.Domain.Mapping;
-global using PacifiCorp.PSPortal.Global;
+global using CFlattSampleApp.Domain.Models;
+global using CFlattSampleApp.Domain.Mapping;
+global using CFlattSampleApp.Global;

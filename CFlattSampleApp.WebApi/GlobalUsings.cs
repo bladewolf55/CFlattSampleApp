@@ -1,3 +1,3 @@
 ﻿global using Microsoft.AspNetCore.Mvc;
-global using PacifiCorp.PSPortal.Domain.Models;
+global using CFlattSampleApp.Domain.Models;
 global using MediatR;

@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
-namespace PacifiCorp.PSPortal.IntegrationTests;
+namespace CFlattSampleApp.IntegrationTests;
 
 public class WebApplicationTestBase : IDisposable
 {

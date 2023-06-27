@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Query.Internal;
 
-namespace PacifiCorp.PSPortal.Data.Features.States;
+namespace CFlattSampleApp.Data.Features.States;
 
 public static class RemoveOrganizationState
 {

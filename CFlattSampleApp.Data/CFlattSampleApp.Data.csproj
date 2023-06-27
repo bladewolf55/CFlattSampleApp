@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PacifiCorp.PSPortal.Global\PacifiCorp.PSPortal.Global.csproj" />
+    <ProjectReference Include="..\CFlattSampleApp.Global\CFlattSampleApp.Global.csproj" />
   </ItemGroup>
 
 </Project>

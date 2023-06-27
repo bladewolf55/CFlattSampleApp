@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PacifiCorp.PSPortal.Data.Models;
+using CFlattSampleApp.Data.Models;
 
-namespace PacifiCorp.PSPortal.IntegrationTests;
+namespace CFlattSampleApp.IntegrationTests;
 
 public class DatabaseSeeder
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using Xunit;
-namespace PacifiCorp.PSPortal.IntegrationTests;
+namespace CFlattSampleApp.IntegrationTests;
 
 public class OrganizationStatesEndpoint_Should : WebApplicationTestBase
 {

@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Diagnostics;
 
-namespace PacifiCorp.PSPortal.Domain.Features.Organizations;
+namespace CFlattSampleApp.Domain.Features.Organizations;
 
 public static class UpdateOrganization
 {

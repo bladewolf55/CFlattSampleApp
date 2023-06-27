@@ -1,7 +1,7 @@
-using PacifiCorp.PSPortal.Domain.Mapping;
-using PacifiCorp.PSPortal.IntegrationTests.TestModels;
+using CFlattSampleApp.Domain.Mapping;
+using CFlattSampleApp.IntegrationTests.TestModels;
 
-namespace PacifiCorp.PSPortal.IntegrationTests;
+namespace CFlattSampleApp.IntegrationTests;
 
 public class OrganizationsEndpoint_Should : WebApplicationTestBase
 {

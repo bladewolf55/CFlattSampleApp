@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.Global
+﻿namespace CFlattSampleApp.Global
 {
     public enum OrganizationType
     {

@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.Domain.Features.States;
+﻿namespace CFlattSampleApp.Domain.Features.States;
 
 public static class RetrieveOrganizationStates
 {

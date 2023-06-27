@@ -1,5 +1,5 @@
-using PacifiCorp.PSPortal.Domain;
-using PacifiCorp.PSPortal.Data;
+using CFlattSampleApp.Domain;
+using CFlattSampleApp.Data;
 using Microsoft.EntityFrameworkCore;
 using MediatR;
 
@@ -14,8 +14,8 @@ builder.Services.AddDbContext<PSPortalDbContext>(options => options
     .UseSqlServer(configuration.GetConnectionString("PSPortalDb")));
 
 builder.Services.AddMediatR(config => config
-    .RegisterServicesFromAssembly(typeof(PacifiCorp.PSPortal.Data.Models.User).Assembly)
-    .RegisterServicesFromAssembly(typeof(PacifiCorp.PSPortal.Domain.Models.User).Assembly));
+    .RegisterServicesFromAssembly(typeof(CFlattSampleApp.Data.Models.User).Assembly)
+    .RegisterServicesFromAssembly(typeof(CFlattSampleApp.Domain.Models.User).Assembly));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

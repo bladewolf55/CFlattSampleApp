@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PacifiCorp.PSPortal.Data;
+using CFlattSampleApp.Data;
 
 #nullable disable
 
-namespace PacifiCorp.PSPortal.Migrations.Migrations
+namespace CFlattSampleApp.Migrations.Migrations
 {
     [DbContext(typeof(PSPortalDbContext))]
     partial class PSPortalDbContextModelSnapshot : ModelSnapshot
@@ -22,7 +22,7 @@ namespace PacifiCorp.PSPortal.Migrations.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("PacifiCorp.PSPortal.Data.Models.Organization", b =>
+            modelBuilder.Entity("CFlattSampleApp.Data.Models.Organization", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace PacifiCorp.PSPortal.Migrations.Migrations
                     b.ToTable("Organizations");
                 });
 
-            modelBuilder.Entity("PacifiCorp.PSPortal.Data.Models.User", b =>
+            modelBuilder.Entity("CFlattSampleApp.Data.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -71,9 +71,9 @@ namespace PacifiCorp.PSPortal.Migrations.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("PacifiCorp.PSPortal.Data.Models.User", b =>
+            modelBuilder.Entity("CFlattSampleApp.Data.Models.User", b =>
                 {
-                    b.HasOne("PacifiCorp.PSPortal.Data.Models.Organization", "Organization")
+                    b.HasOne("CFlattSampleApp.Data.Models.Organization", "Organization")
                         .WithMany("Users")
                         .HasForeignKey("OrganizationId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -82,7 +82,7 @@ namespace PacifiCorp.PSPortal.Migrations.Migrations
                     b.Navigation("Organization");
                 });
 
-            modelBuilder.Entity("PacifiCorp.PSPortal.Data.Models.Organization", b =>
+            modelBuilder.Entity("CFlattSampleApp.Data.Models.Organization", b =>
                 {
                     b.Navigation("Users");
                 });

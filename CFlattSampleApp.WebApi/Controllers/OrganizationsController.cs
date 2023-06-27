@@ -1,6 +1,6 @@
-using PacifiCorp.PSPortal.Domain.Features.Organizations;
+using CFlattSampleApp.Domain.Features.Organizations;
 
-namespace PacifiCorp.PSPortal.WebApi.Controllers;
+namespace CFlattSampleApp.WebApi.Controllers;
 
 [ApiController]
 public class OrganizationsController : ControllerBase

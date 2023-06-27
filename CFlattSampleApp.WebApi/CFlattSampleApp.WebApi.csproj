@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PacifiCorp.PSPortal.Domain\PacifiCorp.PSPortal.Domain.csproj" />
+    <ProjectReference Include="..\CFlattSampleApp.Domain\CFlattSampleApp.Domain.csproj" />
   </ItemGroup>
 
 </Project>

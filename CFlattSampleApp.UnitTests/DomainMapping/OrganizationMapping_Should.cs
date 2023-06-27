@@ -1,6 +1,6 @@
-﻿using PacifiCorp.PSPortal.Domain.Mapping;
+﻿using CFlattSampleApp.Domain.Mapping;
 
-namespace PacifiCorp.PSPortal.UnitTests.DomainMapping;
+namespace CFlattSampleApp.UnitTests.DomainMapping;
 
 public class OrganizationMapping_Should
 {

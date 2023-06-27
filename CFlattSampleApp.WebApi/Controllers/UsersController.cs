@@ -1,6 +1,6 @@
-using PacifiCorp.PSPortal.Domain.Features.Users;
+using CFlattSampleApp.Domain.Features.Users;
 
-namespace PacifiCorp.PSPortal.WebApi.Controllers;
+namespace CFlattSampleApp.WebApi.Controllers;
 
 [ApiController]
 public class UsersController : ControllerBase

@@ -1,7 +1,7 @@
 ﻿using Azure.Core;
 using System.Threading.Tasks;
 using Xunit;
-namespace PacifiCorp.PSPortal.UnitTests.DomainFeatures;
+namespace CFlattSampleApp.UnitTests.DomainFeatures;
 
 public class OrganizationStateFeatures_Should
 {

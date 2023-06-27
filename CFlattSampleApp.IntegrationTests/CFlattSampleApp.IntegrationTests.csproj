@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PacifiCorp.PSPortal.WebApi\PacifiCorp.PSPortal.WebApi.csproj" />
+    <ProjectReference Include="..\CFlattSampleApp.WebApi\CFlattSampleApp.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

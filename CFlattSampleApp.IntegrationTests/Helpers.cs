@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace PacifiCorp.PSPortal.IntegrationTests;
+namespace CFlattSampleApp.IntegrationTests;
 
 public static class Helpers
 {

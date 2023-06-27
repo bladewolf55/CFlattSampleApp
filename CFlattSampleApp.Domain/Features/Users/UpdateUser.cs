@@ -1,11 +1,11 @@
 ﻿using MediatR;
-using PacifiCorp.PSPortal.Domain.Models;
+using CFlattSampleApp.Domain.Models;
 using CommunityToolkit.Diagnostics;
-using PacifiCorp.PSPortal.Data;
-using PacifiCorp.PSPortal.Domain.Mapping;
+using CFlattSampleApp.Data;
+using CFlattSampleApp.Domain.Mapping;
 using Microsoft.EntityFrameworkCore;
 
-namespace PacifiCorp.PSPortal.Domain.Features.Users;
+namespace CFlattSampleApp.Domain.Features.Users;
 
 public static class UpdateUser
 {

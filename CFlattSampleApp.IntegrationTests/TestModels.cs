@@ -1,6 +1,6 @@
-﻿using PacifiCorp.PSPortal.Data.Models;
+﻿using CFlattSampleApp.Data.Models;
 
-namespace PacifiCorp.PSPortal.IntegrationTests.TestModels;
+namespace CFlattSampleApp.IntegrationTests.TestModels;
 
 public static class UserData
 {

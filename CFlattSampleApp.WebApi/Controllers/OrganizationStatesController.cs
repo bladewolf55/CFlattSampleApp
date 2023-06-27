@@ -1,7 +1,7 @@
-using PacifiCorp.PSPortal.Data.Features.States;
-using PacifiCorp.PSPortal.Domain.Features.Organizations;
+using CFlattSampleApp.Data.Features.States;
+using CFlattSampleApp.Domain.Features.Organizations;
 
-namespace PacifiCorp.PSPortal.WebApi.Controllers;
+namespace CFlattSampleApp.WebApi.Controllers;
 
 [ApiController]
 public class OrganizationStatesController : ControllerBase

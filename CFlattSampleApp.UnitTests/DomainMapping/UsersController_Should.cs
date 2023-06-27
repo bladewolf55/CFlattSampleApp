@@ -1,15 +1,15 @@
-﻿using PacifiCorp.PSPortal.WebApi;
-using PacifiCorp.PSPortal.Domain;
-using PacifiCorp.PSPortal.Domain.Models;
-using PacifiCorp.PSPortal.WebApi.Controllers;
+﻿using CFlattSampleApp.WebApi;
+using CFlattSampleApp.Domain;
+using CFlattSampleApp.Domain.Models;
+using CFlattSampleApp.WebApi.Controllers;
 using Castle.Core.Logging;
 using Microsoft.Extensions.Logging;
 using Xunit;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
-using PacifiCorp.PSPortal.Domain.Features;
+using CFlattSampleApp.Domain.Features;
 
-namespace PacifiCorp.PSPortal.UnitTests.DomainMapping;
+namespace CFlattSampleApp.UnitTests.DomainMapping;
 
 public class UsersController_Should
 {

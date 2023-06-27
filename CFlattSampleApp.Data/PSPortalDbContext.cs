@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.Data;
+﻿namespace CFlattSampleApp.Data;
 
 public class PSPortalDbContext : DbContext
 {

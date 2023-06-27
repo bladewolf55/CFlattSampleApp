@@ -1,4 +1,4 @@
-﻿namespace PacifiCorp.PSPortal.UnitTests.TestData;
+﻿namespace CFlattSampleApp.UnitTests.TestData;
 
 /// <summary>
 /// Id is unique

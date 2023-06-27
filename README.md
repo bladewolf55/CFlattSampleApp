@@ -57,11 +57,11 @@ dotnet restore --interactive dotnet/webapi
 # Build app
 ./dotnet/webapi/build/build.ps1
 # Run SQL migrations
-cd package/Migrations/PacifiCorp.PSPortal.Migrations
+cd package/Migrations/CFlattSampleApp.Migrations
 ./efbundle.exe
 # Run IntegrationTests (Optional)
 cd ../../../
-dotnet test dotnet\WebApi\PacifiCorp.PSPortal.IntegrationTests
+dotnet test dotnet\WebApi\CFlattSampleApp.IntegrationTests
 ```
 
 ## Pipeline
@@ -79,7 +79,7 @@ Example:
 
 ```powershell
 cd dotnet/WebApi
-dotnet ef migrations add InitialCreate --project PacifiCorp.PSPortal.Migrations --startup-project PacifiCorp.PSPortal.Migrations --context PSPortalDbContext
+dotnet ef migrations add InitialCreate --project CFlattSampleApp.Migrations --startup-project CFlattSampleApp.Migrations --context PSPortalDbContext
 ```
 
 ## When to run the build script

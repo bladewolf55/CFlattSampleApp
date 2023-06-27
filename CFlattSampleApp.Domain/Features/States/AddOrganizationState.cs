@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Diagnostics;
 
-namespace PacifiCorp.PSPortal.Domain.Features.States;
+namespace CFlattSampleApp.Domain.Features.States;
 
 public static class AddOrganizationState
 {

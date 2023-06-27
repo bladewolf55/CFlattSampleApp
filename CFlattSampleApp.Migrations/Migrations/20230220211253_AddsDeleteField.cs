@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace PacifiCorp.PSPortal.Migrations.Migrations
+namespace CFlattSampleApp.Migrations.Migrations
 {
     /// <inheritdoc />
     public partial class AddsDeleteField : Migration

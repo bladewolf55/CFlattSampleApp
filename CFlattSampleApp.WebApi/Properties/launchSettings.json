@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "PacifiCorp.PSPortal.WebApi": {
+    "CFlattSampleApp.WebApi": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
