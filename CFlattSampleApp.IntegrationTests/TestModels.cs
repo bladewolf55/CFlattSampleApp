@@ -16,7 +16,7 @@ public static class UserData
 
 public static class OrganizationData
 {
-    public static Organization USForestry =>
+    public static Organization USOrganization =>
         new()
         {
             Id = 0,

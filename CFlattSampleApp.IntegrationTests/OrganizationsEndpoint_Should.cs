@@ -11,7 +11,7 @@ public class OrganizationsEndpoint_Should : WebApplicationTestBase
         // arrange
         var count = Context.Organizations.Count();
         Context.ChangeTracker.Clear();
-        Data.Models.Organization expectedDataOrganization = OrganizationData.USForestry;
+        Data.Models.Organization expectedDataOrganization = OrganizationData.USOrganization;
         Domain.Models.Organization submittedDomainOrganization = expectedDataOrganization.ToDomainModel();
 
         var json = System.Text.Json.JsonSerializer.Serialize(submittedDomainOrganization);
