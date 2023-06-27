@@ -12,9 +12,9 @@ public static class RemoveOrganizationState
 
     public class Handler : IRequestHandler<Command>
     {
-        readonly PSPortalDbContext context;
+        readonly CFlattSampleAppDbContext context;
 
-        public Handler(PSPortalDbContext context)
+        public Handler(CFlattSampleAppDbContext context)
         {
             this.context = context;
         }

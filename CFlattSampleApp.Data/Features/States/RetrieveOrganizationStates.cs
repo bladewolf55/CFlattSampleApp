@@ -9,9 +9,9 @@ public static class RetrieveOrganizationStates
 
     public class Hander : IRequestHandler<Command, List<State>>
     {
-        readonly PSPortalDbContext context;
+        readonly CFlattSampleAppDbContext context;
 
-        public Hander(PSPortalDbContext context)
+        public Hander(CFlattSampleAppDbContext context)
         {
             this.context = context;
         }

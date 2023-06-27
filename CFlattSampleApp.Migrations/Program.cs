@@ -11,8 +11,8 @@ IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((builder, services) =>
     {
         IConfiguration configuration = builder.Configuration;
-        services.AddSqlServer<PSPortalDbContext>(
-            configuration.GetConnectionString("PSPortalDb"),
+        services.AddSqlServer<CFlattSampleAppDbContext>(
+            configuration.GetConnectionString("CFlattSampleAppDb"),
             options => options.MigrationsAssembly("CFlattSampleApp.Migrations"));
     })
     .Build();

@@ -10,8 +10,8 @@ IConfiguration configuration = builder.Configuration;
 
 // Add services to the container.
 //builder.Services.AddTransient<ILogger>();
-builder.Services.AddDbContext<PSPortalDbContext>(options => options
-    .UseSqlServer(configuration.GetConnectionString("PSPortalDb")));
+builder.Services.AddDbContext<CFlattSampleAppDbContext>(options => options
+    .UseSqlServer(configuration.GetConnectionString("CFlattSampleAppDb")));
 
 builder.Services.AddMediatR(config => config
     .RegisterServicesFromAssembly(typeof(CFlattSampleApp.Data.Models.User).Assembly)

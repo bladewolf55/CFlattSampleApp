@@ -8,24 +8,24 @@ namespace CFlattSampleApp.IntegrationTests;
 
 public class WebApplicationTestBase : IDisposable
 {
-    public PSPortalDbContext Context { get; private set; }
+    public CFlattSampleAppDbContext Context { get; private set; }
     public WebApplicationFactory<Program> WebApplication { get; private set; }
     public HttpClient Client { get; private set; }
 
     readonly IServiceScope scope;
 
     /// <summary>
-    /// Sets connection database to PSPortalTest"
+    /// Sets connection database to CFlattSampleAppTest"
     /// </summary>
     public WebApplicationTestBase()
     {
-        // "Data Source=localhost;Initial Catalog=PSPortalTest;Integrated Security=True;Persist Security Info=False;Pooling=False;Multiple Active Result Sets=False;Encrypt=False;Trust Server Certificate=False"
+        // "Data Source=localhost;Initial Catalog=CFlattSampleAppTest;Integrated Security=True;Persist Security Info=False;Pooling=False;Multiple Active Result Sets=False;Encrypt=False;Trust Server Certificate=False"
         WebApplication = new WebApplicationFactory<Program>()
             .WithWebHostBuilder(builder =>
             {
                 builder.ConfigureAppConfiguration(config =>
                 {
-                    var connectionString = config.Build().GetConnectionString("PSPortalDb");
+                    var connectionString = config.Build().GetConnectionString("CFlattSampleAppDb");
                     if (connectionString == null)
                         throw new NullReferenceException("connectionString cannot be null");
                     var parts = connectionString.Split(';', StringSplitOptions.TrimEntries);
@@ -39,7 +39,7 @@ public class WebApplicationTestBase : IDisposable
                         {
                             if (part.StartsWith(token, StringComparison.OrdinalIgnoreCase))
                             {
-                                connectionString += $"{token}=PSPortalTest;";
+                                connectionString += $"{token}=CFlattSampleAppTest;";
                                 found = true;
                                 continue;
                             }
@@ -50,7 +50,7 @@ public class WebApplicationTestBase : IDisposable
 
                     List<KeyValuePair<string, string?>> appsettings = new()
                     {
-                    new("ConnectionStrings:PSPortalDb", connectionString)
+                    new("ConnectionStrings:CFlattSampleAppDb", connectionString)
                     };
                     config.AddInMemoryCollection(appsettings);
                 }
@@ -60,7 +60,7 @@ public class WebApplicationTestBase : IDisposable
         Client = WebApplication.CreateClient();
 
         scope = WebApplication.Services.CreateScope();
-        Context = scope.ServiceProvider.GetService<PSPortalDbContext>() 
+        Context = scope.ServiceProvider.GetService<CFlattSampleAppDbContext>() 
             ?? throw new NullReferenceException("Service not found");
         
         Context.Database.EnsureDeleted();

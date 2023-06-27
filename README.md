@@ -1,7 +1,7 @@
-# Public Safety Portal (PSPortal) Web API
+# Public Safety Portal (CFlattSampleApp) Web API
 
 ## Introduction
-Web services consumed by PSPortal
+Web services consumed by CFlattSampleApp
 
 ## Environment
 > Changing the environment? Change the CI/CD pipeline!
@@ -79,7 +79,7 @@ Example:
 
 ```powershell
 cd dotnet/WebApi
-dotnet ef migrations add InitialCreate --project CFlattSampleApp.Migrations --startup-project CFlattSampleApp.Migrations --context PSPortalDbContext
+dotnet ef migrations add InitialCreate --project CFlattSampleApp.Migrations --startup-project CFlattSampleApp.Migrations --context CFlattSampleAppDbContext
 ```
 
 ## When to run the build script

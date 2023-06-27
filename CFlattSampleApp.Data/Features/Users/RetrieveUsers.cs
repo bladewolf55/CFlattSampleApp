@@ -9,9 +9,9 @@ public static class RetrieveUsers
 
     public class Handler : IRequestHandler<Command, List<User>>
     {
-        readonly PSPortalDbContext context;
+        readonly CFlattSampleAppDbContext context;
 
-        public Handler(PSPortalDbContext context)
+        public Handler(CFlattSampleAppDbContext context)
         {
             this.context = context;
         }

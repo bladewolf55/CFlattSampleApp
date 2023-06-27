@@ -11,7 +11,7 @@ using CFlattSampleApp.Data;
 
 namespace CFlattSampleApp.Migrations.Migrations
 {
-    [DbContext(typeof(PSPortalDbContext))]
+    [DbContext(typeof(CFlattSampleAppDbContext))]
     [Migration("20230223215934_Organization")]
     partial class Organization
     {

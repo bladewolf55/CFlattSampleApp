@@ -5,9 +5,9 @@ namespace CFlattSampleApp.IntegrationTests;
 
 public class DatabaseSeeder
 {
-    PSPortalDbContext context = null!;
+    CFlattSampleAppDbContext context = null!;
 
-    public void Seed(PSPortalDbContext context)
+    public void Seed(CFlattSampleAppDbContext context)
     {
         this.context = context;
         AddOrganizations();

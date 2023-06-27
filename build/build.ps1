@@ -87,7 +87,7 @@ CheckForError
 ./build-migrations `
     -ProjectDirectory ../CFlattSampleApp.Migrations `
     -StartupProjectDirectory ../CFlattSampleApp.Migrations `
-    -DbContextName PSPortalDbContext `
+    -DbContextName CFlattSampleAppDbContext `
     -PackageDirectory $PackageDirectory `
     -CI:$CI `
     -Clean:$Clean `

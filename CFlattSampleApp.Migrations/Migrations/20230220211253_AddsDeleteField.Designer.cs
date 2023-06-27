@@ -11,7 +11,7 @@ using CFlattSampleApp.Data;
 
 namespace CFlattSampleApp.Migrations.Migrations
 {
-    [DbContext(typeof(PSPortalDbContext))]
+    [DbContext(typeof(CFlattSampleAppDbContext))]
     [Migration("20230220211253_AddsDeleteField")]
     partial class AddsDeleteField
     {

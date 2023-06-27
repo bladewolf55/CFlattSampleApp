@@ -9,9 +9,9 @@ public static class DeleteOrganization
 
     public class Handler : IRequestHandler<Command, Organization>
     {
-        readonly PSPortalDbContext context;
+        readonly CFlattSampleAppDbContext context;
 
-        public Handler(PSPortalDbContext context)
+        public Handler(CFlattSampleAppDbContext context)
         {
             this.context = context;
         }

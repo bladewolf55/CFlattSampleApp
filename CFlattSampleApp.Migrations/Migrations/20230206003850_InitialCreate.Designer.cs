@@ -11,7 +11,7 @@ using CFlattSampleApp.Data;
 
 namespace CFlattSampleApp.Migrations.Migrations
 {
-    [DbContext(typeof(PSPortalDbContext))]
+    [DbContext(typeof(CFlattSampleAppDbContext))]
     [Migration("20230206003850_InitialCreate")]
     partial class InitialCreate
     {

@@ -1,14 +1,14 @@
 ﻿namespace CFlattSampleApp.Data;
 
-public class PSPortalDbContext : DbContext
+public class CFlattSampleAppDbContext : DbContext
 {
     public DbSet<Organization> Organizations { get; set; } = null!;
     public DbSet<User> Users { get; set; } = null!;
     public DbSet<State> States { get; set; } = null!;
 
-    public PSPortalDbContext() { }
+    public CFlattSampleAppDbContext() { }
 
-    public PSPortalDbContext(DbContextOptions options) : base(options) { }
+    public CFlattSampleAppDbContext(DbContextOptions options) : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

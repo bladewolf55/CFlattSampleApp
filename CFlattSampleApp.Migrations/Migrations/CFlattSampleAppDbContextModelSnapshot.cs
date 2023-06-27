@@ -10,8 +10,8 @@ using CFlattSampleApp.Data;
 
 namespace CFlattSampleApp.Migrations.Migrations
 {
-    [DbContext(typeof(PSPortalDbContext))]
-    partial class PSPortalDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(CFlattSampleAppDbContext))]
+    partial class CFlattSampleAppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

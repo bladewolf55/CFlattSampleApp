@@ -10,9 +10,9 @@ public static class AddOrganizationState
 
     public class Hander : IRequestHandler<Command, State>
     {
-        readonly PSPortalDbContext context;
+        readonly CFlattSampleAppDbContext context;
 
-        public Hander(PSPortalDbContext context)
+        public Hander(CFlattSampleAppDbContext context)
         {
             this.context = context;
         }

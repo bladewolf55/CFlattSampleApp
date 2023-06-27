@@ -9,9 +9,9 @@ public static class RetrieveOrganizations
 
     public class Handler : IRequestHandler<Command, List<Organization>>
     {
-        readonly PSPortalDbContext context;
+        readonly CFlattSampleAppDbContext context;
 
-        public Handler(PSPortalDbContext context)
+        public Handler(CFlattSampleAppDbContext context)
         {
             this.context = context;
         }
