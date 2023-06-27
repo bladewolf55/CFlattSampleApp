@@ -1,7 +1,17 @@
-# Public Safety Portal (CFlattSampleApp) Web API
+# CFlattSampleApp Web API
 
 ## Introduction
-Web services consumed by CFlattSampleApp
+This is a sample application with the following features and techniques:
+
+*   Web API
+*   Service architecture
+*   [MediatR](https://github.com/jbogard/MediatR) library
+*   MS SQL Server for production and integration testing
+*   EF Core
+*   Database Migrations in separate project, outputs an *efbundle* for Continuous Deployment
+*   Unit tests
+*   Integration tests using Visual Studio and ASP.NET test hosting backed by MS SQL Server
+*   PowerShell local build/test/package script usable by Continuous Integration
 
 ## Environment
 > Changing the environment? Change the CI/CD pipeline!
@@ -13,7 +23,7 @@ PowerShell                          | 7.x
 Visual Studio                       | VS 2022
 EF Core Tools                       | latest
 SQL Server Developer                | 2022
-Azure Artifacts Credential Provider | latest
+Azure Artifacts Credential Provider | latest (optional)
 
 Sources:
 *   [.NET](https://dotnet.microsoft.com/download/dotnet)
@@ -22,8 +32,6 @@ Sources:
 *   [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 *   [Azure Artifacts Credential Provider](https://github.com/microsoft/artifacts-credprovider#azure-artifacts-credential-provider)
 
-
-
 ## Getting Started
 > Be sure to use the correct versions from above.
 
@@ -31,7 +39,7 @@ Sources:
 1.  Install PowerShell 7.x.
 1.  Install .NET 7.
 1.  Install SQL Server as default instance
-1.  Install Azure Artifacts Credential Provider
+1.  Install Azure Artifacts Credential Provider (if using)
     ```powershell
     # Windows PowerShell
     iex "& { $(irm https://aka.ms/install-artifacts-credprovider.ps1) }"
@@ -78,7 +86,6 @@ Things needed to smoothly develop, such as how to run service dependencies.
 Example:
 
 ```powershell
-cd dotnet/WebApi
 dotnet ef migrations add InitialCreate --project CFlattSampleApp.Migrations --startup-project CFlattSampleApp.Migrations --context CFlattSampleAppDbContext
 ```
 
