@@ -4,14 +4,25 @@
 This is a sample application with the following features and techniques:
 
 *   Web API
-*   Service architecture
-*   [MediatR](https://github.com/jbogard/MediatR) library
+*   Service/Onion/Clean architecture
+*   Jimmy Bogard's MediatR pattern[^mediator]
 *   MS SQL Server for production and integration testing
 *   EF Core
 *   Database Migrations in separate project, outputs an *efbundle* for Continuous Deployment
 *   Unit tests
 *   Integration tests using Visual Studio and ASP.NET test hosting backed by MS SQL Server
-*   PowerShell local build/test/package script usable by Continuous Integration
+*   Local, modular build/test/package script usable by Continuous Integration
+*   `appsettings.Override.json`, letting developers use their own settings without committing to Git
+
+[^mediator]: While this solution uses Jimmy Bogard's MediatR package, I'm honestly not yet convinced that it's a better pattern than typical service injection. A big caveat is that I'm not yet using it as he'd recommend (obviously impacting the first concern). This solution fundamentally uses the [Onion Architecture](https://jeffreypalermo.com/2013/08/onion-architecture-part-4-after-four-years/), and Bogard's techniques are tuned to his [Vertical Slice Architecture](https://www.youtube.com/watch?v=SUiWfhAhgQw).
+
+## Libraries
+Some of the specialized libraries used are:
+
+*   [MediatR](https://github.com/jbogard/MediatR)
+*   [xUnit](https://xunit.net/)
+*   [NSubstitute](https://nsubstitute.github.io/)
+*   [FluentAssertions](https://fluentassertions.com/)
 
 ## Environment
 > Changing the environment? Change the CI/CD pipeline!
