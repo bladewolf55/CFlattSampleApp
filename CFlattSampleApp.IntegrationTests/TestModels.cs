@@ -20,7 +20,7 @@ public static class OrganizationData
         new()
         {
             Id = 0,
-            OrganizationType = Global.OrganizationType.Partner,
-            Name = "US Forestry"
+            OrganizationType = Global.OrganizationType.External,
+            Name = "US Lots-a-Pots"
         };
 }

@@ -13,7 +13,7 @@ public class OrganizationFeatures_Should
     public async Task Create_a_new_organization()
     {
         // arrange
-        Data.Models.Organization dataOrganization = OrganizationData.CAPartnerOrganization;
+        Data.Models.Organization dataOrganization = OrganizationData.CAOrganization;
         mediator.Send(Arg.Any<Data.Features.Organizations.CreateOrganization.Command>()).Returns(Task.FromResult(dataOrganization));    
         Domain.Models.Organization domainOrganization = dataOrganization.ToDomainModel();
         var command = new Domain.Features.Organizations.CreateOrganization.Command() { Organization = domainOrganization };
@@ -30,7 +30,7 @@ public class OrganizationFeatures_Should
     public async Task Delete_an_organization_by_id()
     {
         // arrange
-        var dataOrganization = OrganizationData.CAPartnerOrganization;
+        var dataOrganization = OrganizationData.CAOrganization;
         dataOrganization.Deleted = true;
         mediator.Send(Arg.Is<Data.Features.Organizations.DeleteOrganization.Command>(a => a.Id == dataOrganization.Id)).Returns(dataOrganization);
 
@@ -48,7 +48,7 @@ public class OrganizationFeatures_Should
     public async Task Return_an_organization()
     {
         // arrange
-        var dataOrganization = OrganizationData.CAPartnerOrganization;
+        var dataOrganization = OrganizationData.CAOrganization;
         dataOrganization.Id = 1;
         mediator.Send(Arg.Is<Data.Features.Organizations.RetrieveOrganization.Command>(a => a.Id == dataOrganization.Id)).Returns(dataOrganization);
         var domainOrganization = dataOrganization.ToDomainModel();
@@ -67,7 +67,7 @@ public class OrganizationFeatures_Should
     public async Task Return_organizations()
     {
         // arrange
-        List<Data.Models.Organization> organizations = new() { OrganizationData.CAPartnerOrganization, OrganizationData.CFlattOrganization };
+        List<Data.Models.Organization> organizations = new() { OrganizationData.CAOrganization, OrganizationData.CFlattOrganization };
         mediator.Send(Arg.Any<Data.Features.Organizations.RetrieveOrganizations.Command>()).Returns(organizations);
 
         var command = new Domain.Features.Organizations.RetrieveOrganizations.Command();
@@ -84,7 +84,7 @@ public class OrganizationFeatures_Should
     public async Task Update_an_organization()
     {
         //arrange
-        var dataOrganization = OrganizationData.CAPartnerOrganization;
+        var dataOrganization = OrganizationData.CAOrganization;
         mediator.Send(Arg.Any<Data.Features.Organizations.UpdateOrganization.Command>()).Returns(dataOrganization);
         dataOrganization.Name = "newname";
         var submittedOrganization = dataOrganization.ToDomainModel();

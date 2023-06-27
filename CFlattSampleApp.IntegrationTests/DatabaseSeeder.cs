@@ -18,10 +18,10 @@ public class DatabaseSeeder
     private void AddOrganizations()
     {
         List<Organization> organizations = new() {
-            new Organization { OrganizationType = Global.OrganizationType.CFlatt, Name = "CFlatt" },
-            new Organization { OrganizationType = Global.OrganizationType.Partner, Name = "Cal Fire" },
-            new Organization { OrganizationType = Global.OrganizationType.Partner, Name = "US Forestry" },
-            new Organization { OrganizationType = Global.OrganizationType.Partner, Name = "Old Partner", Deleted = true },
+            new Organization { OrganizationType = Global.OrganizationType.Internal, Name = "CFlatt" },
+            new Organization { OrganizationType = Global.OrganizationType.External, Name = "California Cookin" },
+            new Organization { OrganizationType = Global.OrganizationType.External, Name = "US Lots-a-Pots" },
+            new Organization { OrganizationType = Global.OrganizationType.External, Name = "Old Spoons (Deleted)", Deleted = true },
         };
         context.Organizations.AddRange(organizations);
         context.SaveChanges();

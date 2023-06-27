@@ -3,7 +3,7 @@
     public enum OrganizationType
     {
         NotSet = 0,
-        CFlatt = 1,
-        Partner = 2
+        Internal = 1,
+        External = 2
     }
 }

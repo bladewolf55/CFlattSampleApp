@@ -9,15 +9,15 @@ public static class OrganizationData
         new()
         {
             Id = 1,
-            OrganizationType = OrganizationType.CFlatt,
+            OrganizationType = OrganizationType.Internal,
             Name = "CFlatt",
         };
 
-    public static Data.Models.Organization CAPartnerOrganization =>
+    public static Data.Models.Organization CAOrganization =>
         new()
         {
             Id = 1,
-            OrganizationType = OrganizationType.CFlatt,
-            Name = "CA Partner",
+            OrganizationType = OrganizationType.Internal,
+            Name = "California Cookin",
         };
 }
