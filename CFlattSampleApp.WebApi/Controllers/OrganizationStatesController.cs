@@ -1,5 +1,5 @@
 using CFlattSampleApp.Data.Features.States;
-using CFlattSampleApp.Domain.Features.Organizations;
+using CFlattSampleApp.Domain.Services;
 
 namespace CFlattSampleApp.WebApi.Controllers;
 

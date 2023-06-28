@@ -16,6 +16,9 @@ public static class OrganizationMapping
 
     public static List<Domain.Models.Organization> ToDomainList(this List<Data.Models.Organization> list) =>
         list.Select(a => a.ToDomainModel()).ToList();
+
+    public static List<Domain.Models.Organization> ToDomainList(this IEnumerable<Data.Models.Organization> list) =>
+        list.Select(a => a.ToDomainModel()).ToList();
     #endregion
 
     #region "Data"

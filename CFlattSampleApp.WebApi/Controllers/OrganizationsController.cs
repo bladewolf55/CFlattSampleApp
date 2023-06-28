@@ -1,4 +1,4 @@
-using CFlattSampleApp.Domain.Features.Organizations;
+using CFlattSampleApp.Domain.Services;
 
 namespace CFlattSampleApp.WebApi.Controllers;
 
@@ -6,12 +6,12 @@ namespace CFlattSampleApp.WebApi.Controllers;
 public class OrganizationsController : ControllerBase
 {
     private readonly ILogger<OrganizationsController> logger;
-    private readonly IMediator mediator;
+    private readonly IOrganizationService organizationService;
 
-    public OrganizationsController(ILogger<OrganizationsController> logger, IMediator mediator)
+    public OrganizationsController(ILogger<OrganizationsController> logger, IOrganizationService organizationService)
     {
         this.logger = logger;
-        this.mediator = mediator;
+        this.organizationService = organizationService;
     }
 
     [HttpGet("organizations/{id}")]
@@ -19,7 +19,7 @@ public class OrganizationsController : ControllerBase
     {
         try
         {
-            var organization = await mediator.Send(new RetrieveOrganization.Command { Id = id });
+            var organization = await organizationService.RetrieveOrganization(id);
             if (organization == null)
                 throw new KeyNotFoundException();
             return Ok(organization);
@@ -39,7 +39,7 @@ public class OrganizationsController : ControllerBase
     [HttpGet("organizations")]
     public async Task<ActionResult<List<Organization>>> Get(bool includeDeleted)
     {
-        var organizations = await mediator.Send(new RetrieveOrganizations.Command { IncludeDeleted = includeDeleted });
+        var organizations = await organizationService.RetrieveOrganizations(includeDeleted);
         return Ok(organizations);
     }
 
@@ -48,7 +48,7 @@ public class OrganizationsController : ControllerBase
     {
         try
         {
-            var organization = await mediator.Send(new CreateOrganization.Command() { Organization = model });
+            var organization = await organizationService.CreateOrganization(model);
             return Ok(organization);
         }
         catch (Exception ex)
@@ -63,7 +63,7 @@ public class OrganizationsController : ControllerBase
     {
         try
         {
-            var organization = await mediator.Send(new UpdateOrganization.Command() { Organization = model });
+            var organization = await organizationService.UpdateOrganization(model);
             if (organization == null)
                 throw new KeyNotFoundException();
             return Ok(organization);
@@ -85,7 +85,7 @@ public class OrganizationsController : ControllerBase
     {
         try
         {
-            var organization = await mediator.Send(new DeleteOrganization.Command() { Id = id });
+            var organization = await organizationService.DeleteOrganization(id);
             if (organization == null)
                 throw new KeyNotFoundException();
             return Ok(organization);

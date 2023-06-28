@@ -1,7 +1,7 @@
-using CFlattSampleApp.Domain;
 using CFlattSampleApp.Data;
 using Microsoft.EntityFrameworkCore;
-using MediatR;
+using Domain = CFlattSampleApp.Domain.Services;
+using Data = CFlattSampleApp.Data.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 // Local developer config, ignored by Git
@@ -12,6 +12,9 @@ IConfiguration configuration = builder.Configuration;
 //builder.Services.AddTransient<ILogger>();
 builder.Services.AddDbContext<CFlattSampleAppDbContext>(options => options
     .UseSqlServer(configuration.GetConnectionString("CFlattSampleAppDb")));
+
+builder.Services.AddScoped<Domain.IOrganizationService, Domain.OrganizationService>();
+builder.Services.AddScoped<Data.IOrganizationService, Data.OrganizationService>();
 
 builder.Services.AddMediatR(config => config
     .RegisterServicesFromAssembly(typeof(CFlattSampleApp.Data.Models.User).Assembly)
